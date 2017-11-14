@@ -3,7 +3,7 @@
 
 # IMPORTANDO A LIB DO FTP
 import ftplib
-import time
+
 
 print('''
 
