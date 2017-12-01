@@ -12,7 +12,7 @@ import time
 
 print('''
 
- © 2017 COPYRIGHT TODOS OS DIREITOS RESERVADOS POR LOOCK UNDERWOOD')
+ © 2017 COPYRIGHT TODOS OS DIREITOS RESERVADOS POR GABRIEL SANTOS')
 
 --------------------------------------------------------------------------------------
 
@@ -25,7 +25,7 @@ print('''
  
 --------------------------------------------------------------------------------------
  X----------------------------------------------------X
- | By: Loock Underwood / Créditos: AnonymousKillerBR1 |
+ | By: Gabriel Santos / Créditos: AnonymousKillerBR1  |
  X----------------------------------------------------X ''')
 
 # PARTE O QUAL O PROGRAMA PEGARÁ AS INFOS PARA FAZER A CONEXÃO 
